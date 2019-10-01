@@ -1,6 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ConsoleApplication1;
+using UnitTestProject1;
+
+
 
 namespace UnitTestProject1
 {
@@ -34,5 +37,23 @@ namespace UnitTestProject1
             bool result4 = Program.IsPrime4);
             Assert.AreEqual(false, result4);
         }
+        [TestMethod]
+        public void TestCeil()
+        {
+            int result1 = Program.Ceil((float)2.3);
+            Assert.Arequal(3, result1);
+            int result2 = Program.Ceil(-2.3f);
+            Assert.Arequal(-2, result2);
+        }
+        [TestMethod]
+        public void TestFloat()
+        {
+            int result1 = Program.Float((float)2.3);
+            Assert.Arequal(2, result1);
+            int result2 = Program.Float(-2.3f);
+            Assert.Arequal(-3, result2);
+        }
+
+
     }
 }
